@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walentynka</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .question {
+            font-size: 34px;
+            font-weight: bold;
+            color: red;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .yes {
+            background-color: green;
+            color: white;
+        }
+        .no {
+            background-color: red;
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+        #image {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="question">Zostaniesz moją walentynką?</p>
+        <p>(Nie da sie zaznaczyć innej odpowiedzi niż tak)</p>
+        <p>(Wyślij screena z odpowiedzią)</p>
+        <img src="kot.jpg" id="image" class="hidden">
+        <br>
+        <button class="btn yes" id="yesBtn">Tak</button>
+        <button class="btn no">Nie</button>
+    </div>
+
+    <script>
+        document.getElementById("yesBtn").addEventListener("click", function() {
+            // Zmiana źródła obrazka po kliknięciu "Tak"
+            document.getElementById("image").src = "kot.jpg"; // Ustaw nowy obrazek
+            document.getElementById("image").classList.remove("hidden"); // Pokaż obrazek
+
+            
+        });
+        document.getElementById("yesBtn").addEventListener("click", function() {
+            // Zmiana źródła obrazka po kliknięciu "Tak"
+            document.getElementById("image").src = "kot.jpg"; // Ustaw nowy obrazek
+            document.getElementById("image").classList.remove("hidden"); // Pokaż obrazek
+
+            
+        });
+    </script>
+</body>
+</html>
